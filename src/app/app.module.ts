@@ -5,6 +5,11 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { LoginComponent } from './login/login.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { AppRoutingModule } from './app-routing.module';
+import { TrackingComponent } from './tracking/tracking.component';
+import { SearchPipe } from './search.pipe';
+import { FormsModule } from '@angular/forms';
+import { PaymentComponent } from './payment/payment.component';
 
 
 @NgModule({
@@ -12,10 +17,15 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     AppComponent,
     HeaderComponent,
     LoginComponent,
-    DashboardComponent
+    DashboardComponent,
+    TrackingComponent,
+    SearchPipe,
+    PaymentComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

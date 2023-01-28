@@ -1,0 +1,46 @@
+<br />
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <h2>Lịch sử giao dịch</h2>
+    </div>
+    <div class="col">
+        <input
+          class="form-control me-2"
+          type="text"
+          placeholder="Search" [(ngModel)]="searchText"
+        />
+    </div>
+  </div>
+  <br />
+  <table class="table table-striped table-bordered ">
+    <thead>
+      <tr class="table-primary">
+        <th scope="col">ID</th>
+        <th scope="col">Time</th>
+        <th scope="col">MSSV</th>
+        <th scope="col">Họ và tên</th>
+        <th scope="col">Biển số xe</th>
+        <th scope="col">Khu vực</th>
+        <th scope="col">User</th>
+        <th scope="col">Loại GD</th>
+        <th scope="col">Thực hiện</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let e of data | search: searchText">
+        <th scope="row">{{e.id}}</th>
+        <td>{{e.time}}</td>
+        <td>{{e.studentId}}</td>
+        <td>{{e.name}}</td>
+        <td>{{e.bienSoXe}}</td>
+        <td>{{e.khuVuc}}</td>
+        <td>{{e.user}}</td>
+        <td>{{e.type}}</td>
+        <td>
+          <button type="button" class="btn btn-warning">Xem thêm</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
